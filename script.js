@@ -23,21 +23,13 @@ function changeScene(direction) {
   setBackground(currentIndex);
 }
 
-function playMusic() {
-  bgMusic.play();
-}
-
-function pauseMusic() {
-  bgMusic.pause();
-}
-
 window.onload = () => {
   setBackground(currentIndex);
-  bgMusic.volume = 0.5;
+  bgMusic.volume = 1.0;
   bgMusic.play();
 };
 
-// Aura Trail Setup
+// Aura Trail Drawing
 const canvas = document.getElementById("auraCanvas");
 const ctx = canvas.getContext("2d");
 let points = [];
@@ -57,7 +49,7 @@ document.addEventListener("mousemove", (e) => {
 
 // Add points from touch
 document.addEventListener("touchmove", (e) => {
-  e.preventDefault(); // Prevent scrolling while drawing
+  e.preventDefault();
   const touch = e.touches[0];
   if (touch) addPoint(touch.clientX, touch.clientY);
 }, { passive: false });
@@ -67,7 +59,6 @@ function addPoint(x, y) {
   if (points.length > 40) points.shift();
 }
 
-// Draw Aura Trail
 function drawAuraTrail() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < points.length; i++) {
@@ -85,7 +76,7 @@ function drawAuraTrail() {
 }
 drawAuraTrail();
 
-// Aura Color Changer
+// Random Aura Color Button
 function changeAuraColor() {
   auraColor = {
     r: Math.floor(Math.random() * 256),

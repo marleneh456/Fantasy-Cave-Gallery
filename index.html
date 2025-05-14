@@ -14,15 +14,14 @@
     <button class="nav-button right" onclick="changeScene(1)">&#8594;</button>
 
     <div class="music-controls">
-      <button onclick="playMusic()">Play Music</button>
-      <button onclick="pauseMusic()">Pause Music</button>
       <button onclick="changeAuraColor()">Random Aura Color</button>
     </div>
   </div>
 
   <canvas id="auraCanvas"></canvas>
 
-  <audio id="bgMusic" src="sounds/background.mp3" preload="auto" loop></audio>
+  <!-- Native audio controls -->
+  <audio id="bgMusic" src="sounds/background.mp3" preload="auto" controls loop></audio>
 
   <script src="script.js"></script>
 </body>
