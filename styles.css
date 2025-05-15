@@ -86,3 +86,10 @@ html, body {
   background-color: #f0f0f0;
   width: 320px;
 }
+
+/* ✅ Mobile Responsive - Your preferred query */
+@media (max-width: 1018px) and (max-height: 2100px) {
+  .music-controls {
+    padding-bottom: 220px;
+  }
+}
