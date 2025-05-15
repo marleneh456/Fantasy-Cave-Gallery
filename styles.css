@@ -67,7 +67,7 @@ html, body {
   gap: 10px;
   z-index: 2;
   margin-top: auto;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 .music-controls button {
@@ -84,7 +84,7 @@ html, body {
   height: 40px;
   border-radius: 30px;
   background-color: #f0f0f0;
-  width: 320px;
+  width: 350px;
 }
 
 /* ✅ Mobile Responsive - Your preferred query */
