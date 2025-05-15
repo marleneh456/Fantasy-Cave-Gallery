@@ -10,7 +10,6 @@ const images = [
 ];
 let currentIndex = 0;
 const background = document.getElementById("background");
-const bgMusic = document.getElementById("bgMusic");
 
 function setBackground(index) {
   background.style.backgroundImage = `url(${images[index]})`;
@@ -25,11 +24,9 @@ function changeScene(direction) {
 
 window.onload = () => {
   setBackground(currentIndex);
-  bgMusic.volume = 1.0;
-  bgMusic.play();
 };
 
-// Aura Trail Drawing
+// Aura drawing (mouse + touch)
 const canvas = document.getElementById("auraCanvas");
 const ctx = canvas.getContext("2d");
 let points = [];
@@ -42,27 +39,21 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-// Add points from mouse
-document.addEventListener("mousemove", (e) => {
-  addPoint(e.clientX, e.clientY);
-});
+function addPoint(x, y) {
+  points.push({ x, y, alpha: 1 });
+  if (points.length > 40) points.shift();
+}
 
-// Add points from touch
+document.addEventListener("mousemove", (e) => addPoint(e.clientX, e.clientY));
 document.addEventListener("touchmove", (e) => {
   e.preventDefault();
   const touch = e.touches[0];
   if (touch) addPoint(touch.clientX, touch.clientY);
 }, { passive: false });
 
-function addPoint(x, y) {
-  points.push({ x, y, alpha: 1 });
-  if (points.length > 40) points.shift();
-}
-
 function drawAuraTrail() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let i = 0; i < points.length; i++) {
-    const p = points[i];
+  for (const p of points) {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 20, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(${auraColor.r}, ${auraColor.g}, ${auraColor.b}, ${p.alpha})`;
@@ -76,7 +67,6 @@ function drawAuraTrail() {
 }
 drawAuraTrail();
 
-// Random Aura Color Button
 function changeAuraColor() {
   auraColor = {
     r: Math.floor(Math.random() * 256),
