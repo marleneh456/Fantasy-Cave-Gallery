@@ -35,69 +35,6 @@ html, body {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column; /* stack children vertically */
-  justify-content: space-between; /* spread content */
-  align-items: center;
-  padding: 20px;
-  z-index: 2;
-  position: relative;
-}
-
-
-.nav-button {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 3rem;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px #000;
-}* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  font-family: Georgia, serif;
-}
-
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  transition: background-image 0.5s ease;
-}
-
-#auraCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.content {
-  width: 100%;
-  height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -130,56 +67,7 @@ html, body {
   gap: 10px;
   z-index: 2;
   margin-top: auto;
-  padding-bottom: 20px;
-}
-
-.music-controls button {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.music-controls audio {
-  height: 40px;
-  border-radius: 30px;
-  background-color: #f0f0f0;
-  width: 320px;
-}
-
-/* ✅ Mobile Responsive - Your preferred query */
-@media (max-width: 1018px) and (max-height: 2100px) {
-  .music-controls {
-    padding-bottom: 10px;
-    gap: 8px;
-  }
-
-  .music-controls button {
-    font-size: 0.95rem;
-    padding: 8px 14px;
-  }
-
-  .music-controls audio {
-    height: 35px;
-    width: 90vw;
-    max-width: 330px;
-  }
-}
-
-
-.music-controls {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  z-index: 2;
+  padding-bottom: 100px;
 }
 
 .music-controls button {
