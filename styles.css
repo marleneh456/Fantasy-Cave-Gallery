@@ -93,6 +93,7 @@ html, body {
 @media (max-width: 1018px) and (max-height: 2100px) {
 
   .music-controls {
+    top: auto;
     bottom: 10px;
   }
 }
