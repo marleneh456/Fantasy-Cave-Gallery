@@ -9,16 +9,22 @@
 <body>
   <div id="background"></div>
 
-  <div class="content">
-    <button class="nav-button left" onclick="changeScene(-1)">&#8592;</button>
+    <div class="content">
     <div class="overlay-text">Welcome to the Fantasy Cave</div>
-    <button class="nav-button right" onclick="changeScene(1)">&#8594;</button>
 
+    <!-- Navigation Buttons -->
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+      <button class="nav-button left" onclick="changeScene(-1)">&#8592;</button>
+      <button class="nav-button right" onclick="changeScene(1)">&#8594;</button>
+    </div>
+
+    <!-- Music Controls -->
     <div class="music-controls">
       <button onclick="changeAuraColor()">Random Aura Color</button>
       <audio id="bgMusic" src="sounds/background.mp3" preload="auto" controls loop></audio>
     </div>
   </div>
+
 
   <canvas id="auraCanvas"></canvas>
 
