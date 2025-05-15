@@ -67,7 +67,7 @@ html, body {
   gap: 10px;
   z-index: 2;
   margin-top: auto;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .music-controls button {
