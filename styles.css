@@ -63,7 +63,7 @@ html, body {
 /* Stacked layout (desktop & base) */
 .music-controls {
   position: absolute;
-  bottom: 30px;
+  bottom: 180px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -93,7 +93,7 @@ html, body {
 /* ✅ PHONE-FRIENDLY STACKED LAYOUT */
 @media (max-width: 1018px) and (max-height: 2100px) {
   .music-controls {
-    bottom: 15px; /* lower to give space */
+    bottom: 115px; /* lower to give space */
     gap: 8px;
   }
 
