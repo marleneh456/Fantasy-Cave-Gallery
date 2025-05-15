@@ -26,7 +26,7 @@ window.onload = () => {
   setBackground(currentIndex);
 };
 
-// Aura drawing (mouse + touch)
+// Aura trail (mouse + touch)
 const canvas = document.getElementById("auraCanvas");
 const ctx = canvas.getContext("2d");
 let points = [];
