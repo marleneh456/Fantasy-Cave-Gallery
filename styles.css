@@ -80,12 +80,6 @@ html, body {
   border-radius: 10px;
 }
 
-.music-controls audio {
-  height: 40px;
-  border-radius: 30px;
-  background-color: #f0f0f0;
-  width: 350px;
-}
 
 /* ✅ Mobile Responsive - Your preferred query */
 @media (max-width: 1018px) and (max-height: 2100px) {
