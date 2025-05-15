@@ -80,7 +80,6 @@ html, body {
   border-radius: 10px;
 }
 
-
 /* ✅ Mobile Responsive - Your preferred query */
 @media (max-width: 1018px) and (max-height: 2100px) {
   .music-controls {
